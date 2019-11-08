@@ -378,7 +378,7 @@ class Google:
                 pass
 
         try:
-            captcha_input = raw_input("Captcha (case insensitive): ") or None
+            captcha_input = input("Captcha (case insensitive): ") or None
         except NameError:
             captcha_input = input("Captcha (case insensitive): ") or None
 
