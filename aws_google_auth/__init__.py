@@ -49,11 +49,9 @@ def parse_args(args):
 
 
 def exit_if_unsupported_python():
-    if sys.version_info.major == 2 and sys.version_info.minor < 7:
-        logging.critical("%s requires Python 2.7 or higher. Please consider "
-                         "upgrading. Support for Python 2.6 and lower was "
-                         "dropped because this tool's dependencies dropped "
-                         "support.", __name__)
+    if sys.version_info.major == 3 and sys.version_info.minor < 6:
+        logging.critical("%s requires Python 3.6 or higher. Please consider "
+                         "upgrading.", __name__)
         logging.critical("For debugging, it appears you're running: %s",
                          sys.version_info)
         logging.critical("For more information, see: "
